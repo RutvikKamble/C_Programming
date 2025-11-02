@@ -1,0 +1,43 @@
+class Demo extends Thread
+{
+    public  void run()
+    {
+        System.out.println("Inside run method of "+Thread.currentThread().getName());
+    }
+}
+
+class ThreadUserDefinedJoinSerialAlive
+{
+    public static void main(String A[])
+    {
+
+        System.out.println("Inside main method");
+        Demo dobj1 = new Demo();
+        Demo dobj2 = new Demo();
+
+        dobj1.setName("First");
+        dobj2.setName("Second");
+
+
+        // Checked Exception
+        try
+        {
+        dobj1.start();
+         System.out.println("Is first thread alive ? "+dobj.isAlive());
+        dobj1.join();
+        System.out.println("End of First Thread");
+        
+        System.out.println("Is first thread alive ? "+dobj.isAlive());
+
+        dobj2.start();
+        dobj2.join();
+        System.out.println("End of Second Thread");
+        }
+        catch(InterruptedException iobj)
+        {
+
+        }
+
+        System.out.println("End of main Thread");
+    }
+}

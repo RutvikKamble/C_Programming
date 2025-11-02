@@ -1,0 +1,8 @@
+Start
+
+	Accept first input as No1
+	Accept first input as No2
+	Perform Addition of No1 & No2
+	Display the Addition on Screen
+Stop
+	

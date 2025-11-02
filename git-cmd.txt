@@ -1,0 +1,31 @@
+# how to clone GitHub repo.
+$ git clone <repo URL>
+
+# configuration of user globally
+$ git config --global user.name "Rutvik008-co"
+
+# configure email globally
+$ git config --global user.email "rutvikkamble016@gmail.com"
+
+# to check weather user name is correct or not.
+$ $ git config --global user.name
+
+
+git clone .
+
+# How to check status
+$ git status
+
+# how to add newly created file and folders to remote repo.
+$git add .
+
+# How to save changes
+$ git commit -m "<give-message>" 
+
+# how to push data into repo.
+$ git push -o main // -o is origin , main is branch name .
+
+
+
+
+
