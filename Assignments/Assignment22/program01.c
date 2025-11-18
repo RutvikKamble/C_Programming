@@ -22,7 +22,7 @@
 //  Description     : It is used to count even numbers 
 //  Input           : int
 //  Output          : int
-//  Author          : Chakradhar Rawaji Dugade
+//  Author          : Rutvik Bibhishan Kamble
 //  Date            : 16/11/2025
 //
 /////////////////////////////////////////////////////////////////////
