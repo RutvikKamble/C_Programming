@@ -14,7 +14,7 @@
 
 void pattern(int iRow, int iCol)
 {
-    int i = 0, j = 0, ;
+    int i = 0, j = 0;
 
     iRow = iCol;
     if(iRow == iCol)
@@ -31,7 +31,7 @@ void pattern(int iRow, int iCol)
     else
     {
         printf("Can not be print!");
-        return -1;
+        //return -1;
     }
 }
 
@@ -42,7 +42,7 @@ int main()
     printf("Enter the number of Row : ");
     scanf("%d",&iValue1);
 
-    printf("Enter htte number of Column : ");
+    printf("Enter the number of Column : ");
     scanf("%d",&iValue2);
 
     pattern(iValue1,iValue2);
