@@ -22,16 +22,15 @@ void pattern(int iRow, int iCol)
 
         for(j = 1; j <= iCol; j++)
         {
-            if(j == i || j == 1 || i == iRow || j == 1 || j == iCol)
+            if(j == i || i == 1 || i == iRow || j == 1 || j == iCol)
             {
                 printf("%d\t",j);
             }
             else
             {
-                printf("@\t");
+                printf("\t");
             }
         }
-        
         printf("\n");
     }
 }
@@ -41,10 +40,10 @@ int main()
     int iValue1 = 0, iValue2 = 0;
 
     printf("Enter the Value of Row : ");
-    scanf("%d",iValue1);
+    scanf("%d",&iValue1);
 
     printf("Enter the Value of Column : ");
-    scanf("%d",iValue2);
+    scanf("%d",&iValue2);
 
     pattern(iValue1,iValue2);
 

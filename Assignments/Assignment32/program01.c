@@ -19,7 +19,6 @@ void pattern(int iRow, int iCol)
     iNo1 = iCol;
     for(i = 1; i <= iRow; i++)
     {
-
         for(j = 1; j <= iCol; j++)
         {
             if(j == iNo1)
