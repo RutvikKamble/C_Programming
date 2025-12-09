@@ -13,9 +13,9 @@ void StringConvert(char *Str1, char *Str2)
             Str1++;
             Str2++;
         }
-        else
+        else if(*Str1 >= 'a' && *Str1 <= 'z')
         {
-            *Str2 = *Str1;
+            *Str2 = *Str1 - 32;
             Str1++;
             Str2++;
         }
