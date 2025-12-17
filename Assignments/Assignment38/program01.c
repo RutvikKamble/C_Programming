@@ -32,7 +32,6 @@ int main()
     scanf("%[^'\n']s",Arr);
 
     StrCpyRev(Arr,Brr);
-
     printf("Updated string is %s",Brr);
 
     return 0;
