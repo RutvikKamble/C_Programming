@@ -45,23 +45,33 @@ void Display(PNODE first)
 
 int DisplaySecLast(PNODE first)
 {
-    int SecLast = 0;
+    int iMax = 0;
+    int SecMax = 0;
 
-    if(first == NULL || first->next == NULL)
+    if(first == NULL)
     {
-        printf("Linked list not contain more than one elements\n");
-        return 0;
+        return -1;
     }
-    else
+
+    iMax = first->data;
+    first = first->next;
+
+    while(first != NULL)
     {
-        while (first->next->next != NULL)
+        if(first->data > iMax)
         {
-        first = first->next;
+            SecMax = iMax;
+            iMax = first->data;
         }
-        SecLast = first->next->data;
+        else if(first->data > SecMax && first->data != iMax)
+        {
+            SecMax = first->data;
+        }
 
-        return SecLast;
+        first = first->next;
     }
+    
+    return SecMax;
 }
 
 
