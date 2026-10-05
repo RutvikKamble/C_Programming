@@ -1,0 +1,565 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.inventory:product-inventory >-------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ product-inventory ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ product-inventory ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 121 source files with javac [debug parameters release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[3,60] package com.example.assets_management.asset_allocation.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[4,50] cannot find symbol
+  symbol:   class Asset
+  location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[5,44] cannot find symbol
+  symbol:   class Branch
+  location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/request/BulkUpdateRequest.java:[4,54] cannot find symbol
+  symbol:   class Allocation
+  location: package com.example.assets_management.asset_allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[30,13] cannot find symbol
+  symbol:   class Asset
+  location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[3,44] cannot find symbol
+  symbol:   class Branch
+  location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[4,45] cannot find symbol
+  symbol:   class Company
+  location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[7,52] package com.example.assets_management.employee.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[3,44] cannot find symbol
+  symbol:   class Branch
+  location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[4,45] cannot find symbol
+  symbol:   class Company
+  location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[45,13] cannot find symbol
+  symbol:   class Branch
+  location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[55,13] cannot find symbol
+  symbol:   class AllocationStatus
+  location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[30,19] cannot find symbol
+  symbol:   class Asset
+  location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[45,20] cannot find symbol
+  symbol:   class Branch
+  location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[55,30] cannot find symbol
+  symbol:   class AllocationStatus
+  location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[17,1] cannot find symbol
+  symbol:   class Asset
+  location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[30,13] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[34,13] cannot find symbol
+  symbol:   class Branch
+  location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[30,21] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[34,20] cannot find symbol
+  symbol:   class Branch
+  location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[18,1] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[33,13] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[37,13] cannot find symbol
+  symbol:   class Branch
+  location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[66,13] cannot find symbol
+  symbol:   class UserStatus
+  location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[33,21] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[37,20] cannot find symbol
+  symbol:   class Branch
+  location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[66,24] cannot find symbol
+  symbol:   class UserStatus
+  location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[21,1] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/response/AllocationResponse.java:[3,60] package com.example.assets_management.asset_allocation.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/response/AllocationResponse.java:[34,13] cannot find symbol
+  symbol:   class AllocationStatus
+  location: class com.example.assets_management.asset_allocation.dto.response.AllocationResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/response/AllocationResponse.java:[34,30] cannot find symbol
+  symbol:   class AllocationStatus
+  location: class com.example.assets_management.asset_allocation.dto.response.AllocationResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/response/AllocationResponse.java:[11,1] cannot find symbol
+  symbol:   class AllocationStatus
+  location: class com.example.assets_management.asset_allocation.dto.response.AllocationResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/repository/AllocationRepository.java:[4,60] package com.example.assets_management.asset_allocation.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/repository/AllocationRepository.java:[15,13] cannot find symbol
+  symbol:   class AllocationStatus
+  location: interface com.example.assets_management.asset_allocation.repository.AllocationRepository
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/service/AllocationServiceImpl.java:[5,50] cannot find symbol
+  symbol:   class Asset
+  location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/service/AllocationServiceImpl.java:[7,44] cannot find symbol
+  symbol:   class Branch
+  location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/service/AllocationServiceImpl.java:[17,60] package com.example.assets_management.asset_allocation.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[3,52] cannot find symbol
+  symbol:   class AssetCategory
+  location: package com.example.assets_management.asset_category
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[4,56] package com.example.assets_management.asset_master.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[5,56] package com.example.assets_management.asset_master.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[7,44] cannot find symbol
+  symbol:   class Branch
+  location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[8,45] cannot find symbol
+  symbol:   class Company
+  location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/branch/entity/Branch.java:[3,45] cannot find symbol
+  symbol:   class Company
+  location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/branch/entity/Branch.java:[29,13] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.branch.entity.Branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/branch/entity/Branch.java:[29,21] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.branch.entity.Branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/branch/entity/Branch.java:[17,1] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.branch.entity.Branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[41,13] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[45,13] cannot find symbol
+  symbol:   class Branch
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[59,13] cannot find symbol
+  symbol:   class AssetCategory
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[63,13] cannot find symbol
+  symbol:   class AssetType
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/vendor/entity/Vendor.java:[3,45] cannot find symbol
+  symbol:   class Company
+  location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[83,13] cannot find symbol
+  symbol:   class AssetStatus
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[41,21] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[45,20] cannot find symbol
+  symbol:   class Branch
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[59,27] cannot find symbol
+  symbol:   class AssetCategory
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[63,23] cannot find symbol
+  symbol:   class AssetType
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[83,25] cannot find symbol
+  symbol:   class AssetStatus
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[29,1] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/vendor/entity/Vendor.java:[28,13] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.vendor.entity.Vendor
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/vendor/entity/Vendor.java:[28,21] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.vendor.entity.Vendor
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/vendor/entity/Vendor.java:[16,1] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.vendor.entity.Vendor
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryRequest.java:[3,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[3,45] cannot find symbol
+  symbol:   class Company
+  location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[4,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryUpdateDTO.java:[3,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryUpdateDTO.java:[14,13] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.AssetCategoryUpdateDTO
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryUpdateDTO.java:[14,32] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.AssetCategoryUpdateDTO
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryUpdateDTO.java:[10,1] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.AssetCategoryUpdateDTO
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[28,13] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[39,13] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[28,21] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[39,32] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[16,1] cannot find symbol
+  symbol:   class Company
+  location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryRequest.java:[14,13] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.AssetCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/SubCategoryRequest.java:[3,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryRequest.java:[14,32] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.AssetCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryRequest.java:[11,1] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.AssetCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/SubCategoryRequest.java:[13,13] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.SubCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/SubCategoryRequest.java:[13,32] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.SubCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/SubCategoryRequest.java:[10,1] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_category.dto.request.SubCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/controller/AssetCategoryController.java:[8,1] package com.example.assets_management.asset_category.dto does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/repository/AssetCategoryRepository.java:[4,52] cannot find symbol
+  symbol:   class AssetCategory
+  location: package com.example.assets_management.asset_category
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/service/AssetCategoryServiceImpl.java:[5,45] cannot find symbol
+  symbol:   class Company
+  location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/service/AssetCategoryServiceImpl.java:[6,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/dto/response/AssetHistoryResponse.java:[4,50] cannot find symbol
+  symbol:   class Asset
+  location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/dto/response/AssetHistoryResponse.java:[24,9] cannot find symbol
+  symbol:   class Asset
+  location: class com.example.assets_management.asset_history.dto.response.AssetHistoryResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/entity/AssetHistory.java:[3,50] cannot find symbol
+  symbol:   class Asset
+  location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/entity/AssetHistory.java:[42,13] cannot find symbol
+  symbol:   class Asset
+  location: class com.example.assets_management.asset_history.entity.AssetHistory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/entity/AssetHistory.java:[42,19] cannot find symbol
+  symbol:   class Asset
+  location: class com.example.assets_management.asset_history.entity.AssetHistory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/entity/AssetHistory.java:[28,1] cannot find symbol
+  symbol:   class Asset
+  location: class com.example.assets_management.asset_history.entity.AssetHistory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/service/AssetHistoryServiceImpl.java:[7,50] cannot find symbol
+  symbol:   class Asset
+  location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/dto/request/BulkUpdateRequest.java:[4,50] cannot find symbol
+  symbol:   class Asset
+  location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[5,52] cannot find symbol
+  symbol:   class AssetCategory
+  location: package com.example.assets_management.asset_category
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[9,44] cannot find symbol
+  symbol:   class Branch
+  location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[11,45] cannot find symbol
+  symbol:   class Company
+  location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[23,56] package com.example.assets_management.asset_master.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[24,56] package com.example.assets_management.asset_master.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_model/dto/response/AssetModelResponse.java:[4,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_model/dto/response/AssetModelResponse.java:[28,9] cannot find symbol
+  symbol:   class DepreciationMethod
+  location: class com.example.assets_management.asset_model.dto.response.AssetModelResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_model/dto/request/AssetModelRequest.java:[4,58] package com.example.assets_management.asset_category.enums does not exist
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.528 s
+[INFO] Finished at: 2026-08-08T00:05:34+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile (default-compile) on project product-inventory: Compilation failure: Compilation failure: 
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[3,60] package com.example.assets_management.asset_allocation.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[4,50] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[5,44] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/request/BulkUpdateRequest.java:[4,54] cannot find symbol
+[ERROR]   symbol:   class Allocation
+[ERROR]   location: package com.example.assets_management.asset_allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[30,13] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[3,44] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[4,45] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[7,52] package com.example.assets_management.employee.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[3,44] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[4,45] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[45,13] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[55,13] cannot find symbol
+[ERROR]   symbol:   class AllocationStatus
+[ERROR]   location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[30,19] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[45,20] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[55,30] cannot find symbol
+[ERROR]   symbol:   class AllocationStatus
+[ERROR]   location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/entity/Allocation.java:[17,1] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: class com.example.assets_management.asset_allocation.entity.Allocation
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[30,13] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[34,13] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[30,21] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[34,20] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/department/entity/Department.java:[18,1] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.department.entity.Department
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[33,13] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[37,13] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[66,13] cannot find symbol
+[ERROR]   symbol:   class UserStatus
+[ERROR]   location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[33,21] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[37,20] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[66,24] cannot find symbol
+[ERROR]   symbol:   class UserStatus
+[ERROR]   location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/employee/entity/Employee.java:[21,1] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.employee.entity.Employee
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/response/AllocationResponse.java:[3,60] package com.example.assets_management.asset_allocation.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/response/AllocationResponse.java:[34,13] cannot find symbol
+[ERROR]   symbol:   class AllocationStatus
+[ERROR]   location: class com.example.assets_management.asset_allocation.dto.response.AllocationResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/response/AllocationResponse.java:[34,30] cannot find symbol
+[ERROR]   symbol:   class AllocationStatus
+[ERROR]   location: class com.example.assets_management.asset_allocation.dto.response.AllocationResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/dto/response/AllocationResponse.java:[11,1] cannot find symbol
+[ERROR]   symbol:   class AllocationStatus
+[ERROR]   location: class com.example.assets_management.asset_allocation.dto.response.AllocationResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/repository/AllocationRepository.java:[4,60] package com.example.assets_management.asset_allocation.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/repository/AllocationRepository.java:[15,13] cannot find symbol
+[ERROR]   symbol:   class AllocationStatus
+[ERROR]   location: interface com.example.assets_management.asset_allocation.repository.AllocationRepository
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/service/AllocationServiceImpl.java:[5,50] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/service/AllocationServiceImpl.java:[7,44] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_allocation/service/AllocationServiceImpl.java:[17,60] package com.example.assets_management.asset_allocation.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[3,52] cannot find symbol
+[ERROR]   symbol:   class AssetCategory
+[ERROR]   location: package com.example.assets_management.asset_category
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[4,56] package com.example.assets_management.asset_master.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[5,56] package com.example.assets_management.asset_master.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[7,44] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[8,45] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/branch/entity/Branch.java:[3,45] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/branch/entity/Branch.java:[29,13] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.branch.entity.Branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/branch/entity/Branch.java:[29,21] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.branch.entity.Branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/branch/entity/Branch.java:[17,1] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.branch.entity.Branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[41,13] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[45,13] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[59,13] cannot find symbol
+[ERROR]   symbol:   class AssetCategory
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[63,13] cannot find symbol
+[ERROR]   symbol:   class AssetType
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/vendor/entity/Vendor.java:[3,45] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[83,13] cannot find symbol
+[ERROR]   symbol:   class AssetStatus
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[41,21] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[45,20] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[59,27] cannot find symbol
+[ERROR]   symbol:   class AssetCategory
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[63,23] cannot find symbol
+[ERROR]   symbol:   class AssetType
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[83,25] cannot find symbol
+[ERROR]   symbol:   class AssetStatus
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/entity/Asset.java:[29,1] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.asset_master.entity.Asset
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/vendor/entity/Vendor.java:[28,13] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.vendor.entity.Vendor
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/vendor/entity/Vendor.java:[28,21] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.vendor.entity.Vendor
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/vendor/entity/Vendor.java:[16,1] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.vendor.entity.Vendor
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryRequest.java:[3,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[3,45] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[4,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryUpdateDTO.java:[3,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryUpdateDTO.java:[14,13] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.AssetCategoryUpdateDTO
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryUpdateDTO.java:[14,32] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.AssetCategoryUpdateDTO
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryUpdateDTO.java:[10,1] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.AssetCategoryUpdateDTO
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[28,13] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[39,13] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[28,21] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[39,32] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/entity/AssetCategory.java:[16,1] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: class com.example.assets_management.asset_category.entity.AssetCategory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryRequest.java:[14,13] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.AssetCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/SubCategoryRequest.java:[3,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryRequest.java:[14,32] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.AssetCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/AssetCategoryRequest.java:[11,1] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.AssetCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/SubCategoryRequest.java:[13,13] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.SubCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/SubCategoryRequest.java:[13,32] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.SubCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/dto/request/SubCategoryRequest.java:[10,1] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_category.dto.request.SubCategoryRequest
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/controller/AssetCategoryController.java:[8,1] package com.example.assets_management.asset_category.dto does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/repository/AssetCategoryRepository.java:[4,52] cannot find symbol
+[ERROR]   symbol:   class AssetCategory
+[ERROR]   location: package com.example.assets_management.asset_category
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/service/AssetCategoryServiceImpl.java:[5,45] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_category/service/AssetCategoryServiceImpl.java:[6,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/dto/response/AssetHistoryResponse.java:[4,50] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/dto/response/AssetHistoryResponse.java:[24,9] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: class com.example.assets_management.asset_history.dto.response.AssetHistoryResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/entity/AssetHistory.java:[3,50] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/entity/AssetHistory.java:[42,13] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: class com.example.assets_management.asset_history.entity.AssetHistory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/entity/AssetHistory.java:[42,19] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: class com.example.assets_management.asset_history.entity.AssetHistory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/entity/AssetHistory.java:[28,1] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: class com.example.assets_management.asset_history.entity.AssetHistory
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_history/service/AssetHistoryServiceImpl.java:[7,50] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/dto/request/BulkUpdateRequest.java:[4,50] cannot find symbol
+[ERROR]   symbol:   class Asset
+[ERROR]   location: package com.example.assets_management.asset_master
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[5,52] cannot find symbol
+[ERROR]   symbol:   class AssetCategory
+[ERROR]   location: package com.example.assets_management.asset_category
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[9,44] cannot find symbol
+[ERROR]   symbol:   class Branch
+[ERROR]   location: package com.example.assets_management.branch
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[11,45] cannot find symbol
+[ERROR]   symbol:   class Company
+[ERROR]   location: package com.example.assets_management.company
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[23,56] package com.example.assets_management.asset_master.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_master/service/AssetServiceImpl.java:[24,56] package com.example.assets_management.asset_master.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_model/dto/response/AssetModelResponse.java:[4,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_model/dto/response/AssetModelResponse.java:[28,9] cannot find symbol
+[ERROR]   symbol:   class DepreciationMethod
+[ERROR]   location: class com.example.assets_management.asset_model.dto.response.AssetModelResponse
+[ERROR] /f:/31-7-2026/new UI/zat-asset/ZAT_Assets/src/main/java/com/example/assets_management/asset_model/dto/request/AssetModelRequest.java:[4,58] package com.example.assets_management.asset_category.enums does not exist
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

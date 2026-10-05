@@ -1,0 +1,1521 @@
+{
+  "info": {
+    "name": "ZAT Asset Management - Phase II",
+    "description": "Postman collection for Phase II features: Maintenance & Work Orders, Warranty tracking, Asset Documents, Asset Requests with approval chain, and Asset Audits",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "key": "assetId",
+      "value": ""
+    },
+    {
+      "key": "vehicleId",
+      "value": ""
+    },
+    {
+      "key": "insurancePolicyId",
+      "value": ""
+    },
+    {
+      "key": "vendorId",
+      "value": ""
+    },
+    {
+      "key": "logId",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Maintenance & Work Orders",
+      "item": [
+        {
+          "name": "Create Maintenance Record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"maintenanceType\": \"PREVENTIVE\",\n  \"scheduledDate\": \"2026-09-15\",\n  \"completedDate\": null,\n  \"performedBy\": \"Technician Name\",\n  \"cost\": 500.00,\n  \"status\": \"SCHEDULED\",\n  \"remarks\": \"Quarterly preventive maintenance\",\n  \"nextDueDate\": \"2026-12-15\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance"
+              ]
+            },
+            "description": "Creates a new maintenance record for an asset"
+          }
+        },
+        {
+          "name": "Update Maintenance Record (Full)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"maintenanceType\": \"CORRECTIVE\",\n  \"scheduledDate\": \"2026-09-15\",\n  \"completedDate\": \"2026-09-16\",\n  \"performedBy\": \"Technician Name\",\n  \"cost\": 750.00,\n  \"status\": \"COMPLETED\",\n  \"remarks\": \"Repaired broken component\",\n  \"nextDueDate\": \"2026-12-16\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Maintenance record ID"
+                }
+              ]
+            },
+            "description": "Fully updates an existing maintenance record (all fields replaced)"
+          }
+        },
+        {
+          "name": "Patch Maintenance Record (Partial)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"COMPLETED\",\n  \"completedDate\": \"2026-09-16\",\n  \"cost\": 600.00\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Maintenance record ID"
+                }
+              ]
+            },
+            "description": "Partially updates an existing maintenance record (only non-null fields are updated)"
+          }
+        },
+        {
+          "name": "Bulk Delete Maintenance Records",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[1, 2, 3]"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/bulk-delete",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                "bulk-delete"
+              ]
+            },
+            "description": "Bulk delete maintenance records by list of IDs"
+          }
+        },
+        {
+          "name": "Bulk Update Maintenance Records",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ids\": [1, 2, 3],\n  \"updates\": {\n    \"status\": \"COMPLETED\",\n    \"performedBy\": \"Service Team\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/bulk-update",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                "bulk-update"
+              ]
+            },
+            "description": "Bulk update maintenance records: update the same fields for all given IDs"
+          }
+        },
+        {
+          "name": "Delete Maintenance Record",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Maintenance record ID"
+                }
+              ]
+            },
+            "description": "Deletes a maintenance record by ID"
+          }
+        },
+        {
+          "name": "Get Maintenance Record by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Maintenance record ID"
+                }
+              ]
+            },
+            "description": "Retrieves a single maintenance record by ID"
+          }
+        },
+        {
+          "name": "Get All Maintenance Records",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance"
+              ]
+            },
+            "description": "Retrieves all maintenance records"
+          }
+        },
+        {
+          "name": "Get Maintenance Records by Asset ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/asset/:assetId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                "asset",
+                ":assetId"
+              ],
+              "variable": [
+                {
+                  "key": "assetId",
+                  "value": "asset-uuid-here",
+                  "description": "Asset UUID"
+                }
+              ]
+            },
+            "description": "Retrieves all maintenance records for a specific asset"
+          }
+        },
+        {
+          "name": "Get Upcoming Maintenance by Asset ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/:assetId/upcoming",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                ":assetId",
+                "upcoming"
+              ],
+              "variable": [
+                {
+                  "key": "assetId",
+                  "value": "asset-uuid-here",
+                  "description": "Asset UUID"
+                }
+              ]
+            },
+            "description": "Retrieves the single soonest upcoming maintenance record for a specific asset"
+          }
+        },
+        {
+          "name": "Get Completed Maintenance by Asset ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-maintenance/:assetId/completed",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-maintenance",
+                ":assetId",
+                "completed"
+              ],
+              "variable": [
+                {
+                  "key": "assetId",
+                  "value": "asset-uuid-here",
+                  "description": "Asset UUID"
+                }
+              ]
+            },
+            "description": "Retrieves the single most recent completed maintenance record for a specific asset"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Warranty Tracking",
+      "item": [
+        {
+          "name": "Create Warranty Record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"warrantyType\": \"MANUFACTURER\",\n  \"provider\": \"Dell Technologies\",\n  \"startDate\": \"2026-01-01\",\n  \"endDate\": \"2028-01-01\",\n  \"coverageDetails\": [\"Hardware coverage\", \"On-site service\", \"24/7 support\"],\n  \"status\": \"ACTIVE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-warranty",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-warranty"
+              ]
+            },
+            "description": "Creates a new warranty record for an asset"
+          }
+        },
+        {
+          "name": "Update Warranty Record",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"warrantyType\": \"EXTENDED\",\n  \"provider\": \"Dell Technologies\",\n  \"startDate\": \"2026-01-01\",\n  \"endDate\": \"2030-01-01\",\n  \"coverageDetails\": [\"Hardware coverage\", \"On-site service\", \"24/7 support\", \"Accidental damage protection\"],\n  \"status\": \"ACTIVE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-warranty/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-warranty",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Warranty record ID"
+                }
+              ]
+            },
+            "description": "Fully updates an existing warranty record (all fields replaced)"
+          }
+        },
+        {
+          "name": "Delete Warranty Record",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-warranty/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-warranty",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Warranty record ID"
+                }
+              ]
+            },
+            "description": "Deletes a warranty record by ID"
+          }
+        },
+        {
+          "name": "Get Warranty Record by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-warranty/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-warranty",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Warranty record ID"
+                }
+              ]
+            },
+            "description": "Retrieves a single warranty record by ID"
+          }
+        },
+        {
+          "name": "Get All Warranty Records",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-warranty",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-warranty"
+              ]
+            },
+            "description": "Retrieves all warranty records"
+          }
+        },
+        {
+          "name": "Get Warranties by Asset ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-warranty/asset/:assetId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-warranty",
+                "asset",
+                ":assetId"
+              ],
+              "variable": [
+                {
+                  "key": "assetId",
+                  "value": "asset-uuid-here",
+                  "description": "Asset UUID"
+                }
+              ]
+            },
+            "description": "Retrieves all warranties for a specific asset"
+          }
+        },
+        {
+          "name": "Get Expiring Soon Warranties",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-warranty/expiring-soon",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-warranty",
+                "expiring-soon"
+              ]
+            },
+            "description": "Retrieves all warranties that are expiring within the next 30 days (alert functionality)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Asset Documents",
+      "item": [
+        {
+          "name": "Create Document Record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"documentType\": \"INVOICE\",\n  \"documentName\": \"Purchase Invoice\",\n  \"filePath\": \"/zat-drive/documents/asset-invoice-001.pdf\",\n  \"uploadedBy\": \"john.doe\",\n  \"uploadedDate\": \"2026-08-13T10:30:00\",\n  \"expiryDate\": null\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-documents",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-documents"
+              ]
+            },
+            "description": "Creates a new document record linked to Zat Drive"
+          }
+        },
+        {
+          "name": "Update Document Record",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"documentType\": \"INSURANCE\",\n  \"documentName\": \"Asset Insurance Policy\",\n  \"filePath\": \"/zat-drive/documents/insurance-policy-001.pdf\",\n  \"uploadedBy\": \"john.doe\",\n  \"uploadedDate\": \"2026-08-13T10:30:00\",\n  \"expiryDate\": \"2027-08-13\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-documents/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-documents",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Document record ID"
+                }
+              ]
+            },
+            "description": "Updates an existing document record"
+          }
+        },
+        {
+          "name": "Delete Document Record",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-documents/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-documents",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Document record ID"
+                }
+              ]
+            },
+            "description": "Deletes a document record by ID"
+          }
+        },
+        {
+          "name": "Get Document Record by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-documents/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-documents",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Document record ID"
+                }
+              ]
+            },
+            "description": "Retrieves a single document record by ID"
+          }
+        },
+        {
+          "name": "Get All Document Records",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-documents",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-documents"
+              ]
+            },
+            "description": "Retrieves all document records"
+          }
+        },
+        {
+          "name": "Get Documents by Asset ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-documents/asset/:assetId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-documents",
+                "asset",
+                ":assetId"
+              ],
+              "variable": [
+                {
+                  "key": "assetId",
+                  "value": "asset-uuid-here",
+                  "description": "Asset UUID"
+                }
+              ]
+            },
+            "description": "Retrieves all documents for a specific asset"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Asset Requests (Approval Chain)",
+      "item": [
+        {
+          "name": "Create Asset Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestType\": \"NEWEST\",\n  \"asset\": null,\n  \"requestedCategory\": \"Laptop\",\n  \"employeeId\": \"EMP001\",\n  \"employeeName\": \"John Doe\",\n  \"department\": \"Engineering\",\n  \"requestDate\": \"2026-08-13\",\n  \"priority\": \"HIGH\",\n  \"status\": \"DRAFT\",\n  \"approvedBy\": null,\n  \"remarks\": \"Need new laptop for development work\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests"
+              ]
+            },
+            "description": "Creates a new asset request (NEWEST, REPAIR, or REPLACEMENT)"
+          }
+        },
+        {
+          "name": "Update Asset Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestType\": \"REPAIR\",\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"requestedCategory\": null,\n  \"employeeId\": \"EMP001\",\n  \"employeeName\": \"John Doe\",\n  \"department\": \"Engineering\",\n  \"requestDate\": \"2026-08-13\",\n  \"priority\": \"MEDIUM\",\n  \"status\": \"SEND\",\n  \"approvedBy\": null,\n  \"remarks\": \"Laptop screen needs repair\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Asset request ID"
+                }
+              ]
+            },
+            "description": "Updates an existing asset request"
+          }
+        },
+        {
+          "name": "Delete Asset Request",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Asset request ID"
+                }
+              ]
+            },
+            "description": "Deletes an asset request by ID"
+          }
+        },
+        {
+          "name": "Get Asset Request by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Asset request ID"
+                }
+              ]
+            },
+            "description": "Retrieves a single asset request by ID"
+          }
+        },
+        {
+          "name": "Get All Asset Requests",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests"
+              ]
+            },
+            "description": "Retrieves all asset requests"
+          }
+        },
+        {
+          "name": "Get Requests by Asset ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests/asset/:assetId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests",
+                "asset",
+                ":assetId"
+              ],
+              "variable": [
+                {
+                  "key": "assetId",
+                  "value": "asset-uuid-here",
+                  "description": "Asset UUID"
+                }
+              ]
+            },
+            "description": "Retrieves all requests for a specific asset"
+          }
+        },
+        {
+          "name": "Get Requests by Status",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests/status/:status",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests",
+                "status",
+                ":status"
+              ],
+              "variable": [
+                {
+                  "key": "status",
+                  "value": "SEND",
+                  "description": "Request status (DRAFT, SEND, ACCEPT, REJECT)"
+                }
+              ]
+            },
+            "description": "Retrieves all requests with a specific status"
+          }
+        },
+        {
+          "name": "Approve by Department Head",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests/:id/approve-dept-head?approvedBy=:approvedBy",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests",
+                ":id",
+                "approve-dept-head"
+              ],
+              "query": [
+                {
+                  "key": "approvedBy",
+                  "value": "manager.name",
+                  "description": "Name of the department head approving the request"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Asset request ID"
+                }
+              ]
+            },
+            "description": "Manager approves request (SEND \u2192 ACCEPT) - First level approval"
+          }
+        },
+        {
+          "name": "Approve by Asset Manager",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests/:id/approve-asset-mgr?approvedBy=:approvedBy",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests",
+                ":id",
+                "approve-asset-mgr"
+              ],
+              "query": [
+                {
+                  "key": "approvedBy",
+                  "value": "asset.manager.name",
+                  "description": "Name of the asset manager approving the request"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Asset request ID"
+                }
+              ]
+            },
+            "description": "Asset Manager approves request (SEND \u2192 ACCEPT) - Second level approval"
+          }
+        },
+        {
+          "name": "Reject Asset Request",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-requests/:id/reject?rejectedBy=:rejectedBy&reason=:reason",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-requests",
+                ":id",
+                "reject"
+              ],
+              "query": [
+                {
+                  "key": "rejectedBy",
+                  "value": "manager.name",
+                  "description": "Name of the person rejecting the request"
+                },
+                {
+                  "key": "reason",
+                  "value": "Budget constraints",
+                  "description": "Optional reason for rejection",
+                  "disabled": true
+                }
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Asset request ID"
+                }
+              ]
+            },
+            "description": "Reject request (SEND \u2192 REJECT) - Can be done by either approver"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Asset Audits",
+      "item": [
+        {
+          "name": "Create Audit Record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"auditDate\": \"2026-08-13\",\n  \"auditedBy\": \"audit.team\",\n  \"locationVerified\": \"Building A, Floor 3, Desk 15\",\n  \"condition\": \"Good\",\n  \"discrepancyNotes\": null,\n  \"status\": \"Verified\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-audits",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-audits"
+              ]
+            },
+            "description": "Creates a new audit record for physical asset verification"
+          }
+        },
+        {
+          "name": "Update Audit Record",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset\": {\n    \"id\": \"asset-uuid-here\"\n  },\n  \"auditDate\": \"2026-08-13\",\n  \"auditedBy\": \"audit.team\",\n  \"locationVerified\": \"Building A, Floor 3, Desk 15\",\n  \"condition\": \"Damaged\",\n  \"discrepancyNotes\": \"Screen has cracks, keyboard keys missing\",\n  \"status\": \"DiscrepancyFound\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-audits/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-audits",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Audit record ID"
+                }
+              ]
+            },
+            "description": "Updates an existing audit record"
+          }
+        },
+        {
+          "name": "Delete Audit Record",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-audits/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-audits",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Audit record ID"
+                }
+              ]
+            },
+            "description": "Deletes an audit record by ID"
+          }
+        },
+        {
+          "name": "Get Audit Record by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-audits/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-audits",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "description": "Audit record ID"
+                }
+              ]
+            },
+            "description": "Retrieves a single audit record by ID"
+          }
+        },
+        {
+          "name": "Get All Audit Records",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-audits",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-audits"
+              ]
+            },
+            "description": "Retrieves all audit records"
+          }
+        },
+        {
+          "name": "Get Audits by Asset ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/asset-audits/asset/:assetId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asset-audits",
+                "asset",
+                ":assetId"
+              ],
+              "variable": [
+                {
+                  "key": "assetId",
+                  "value": "asset-uuid-here",
+                  "description": "Asset UUID"
+                }
+              ]
+            },
+            "description": "Retrieves all audits for a specific asset (system count vs physical count reconciliation)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vehicle Management",
+      "description": "Vehicle details, service history and fuel history APIs.",
+      "item": [
+        {
+          "name": "Create Vehicle",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assetId\": \"{{assetId}}\",\n  \"registrationNumber\": \"MH12AB1234\",\n  \"insurancePolicyId\": \"{{insurancePolicyId}}\",\n  \"fuelType\": \"DIESEL\",\n  \"changedBy\": \"Postman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Vehicles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Vehicle By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Vehicle By Asset ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/asset/{{assetId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "asset",
+                "{{assetId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Vehicle",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"registrationNumber\": \"MH12AB1234\",\n  \"insurancePolicyId\": \"{{insurancePolicyId}}\",\n  \"fuelType\": \"DIESEL\",\n  \"changedBy\": \"Postman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete Vehicle",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Service Log",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/service-logs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "service-logs"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"serviceDate\": \"2026-09-01\",\n  \"odometerReading\": 10000,\n  \"cost\": 15000,\n  \"vendorId\": \"{{vendorId}}\",\n  \"remarks\": \"Regular service\",\n  \"changedBy\": \"Postman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get Service Logs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/service-logs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "service-logs"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Service Log By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/service-logs/{{logId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "service-logs",
+                "{{logId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Service Log",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/service-logs/{{logId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "service-logs",
+                "{{logId}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"serviceDate\": \"2026-09-01\",\n  \"odometerReading\": 10000,\n  \"cost\": 15000,\n  \"vendorId\": \"{{vendorId}}\",\n  \"remarks\": \"Updated service\",\n  \"changedBy\": \"Postman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete Service Log",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/service-logs/{{logId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "service-logs",
+                "{{logId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Fuel Log",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/fuel-logs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "fuel-logs"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2026-09-05\",\n  \"amount\": 50,\n  \"cost\": 5000,\n  \"remarks\": \"Fuel refill\",\n  \"changedBy\": \"Postman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get Fuel Logs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/fuel-logs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "fuel-logs"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Fuel Log By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/fuel-logs/{{logId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "fuel-logs",
+                "{{logId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Fuel Log",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/fuel-logs/{{logId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "fuel-logs",
+                "{{logId}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2026-09-05\",\n  \"amount\": 50,\n  \"cost\": 5000,\n  \"remarks\": \"Updated fuel entry\",\n  \"changedBy\": \"Postman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete Fuel Log",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}/fuel-logs/{{logId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "{{vehicleId}}",
+                "fuel-logs",
+                "{{logId}}"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

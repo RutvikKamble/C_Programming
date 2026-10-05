@@ -1,0 +1,1 @@
+package com.example.assets_management.security.auth; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface RefreshTokenRepository extends JpaRepository<RefreshToken,UUID>{Optional<RefreshToken> findByTokenHash(String hash); List<RefreshToken> findByUser_IdAndRevokedAtIsNull(UUID userId);}

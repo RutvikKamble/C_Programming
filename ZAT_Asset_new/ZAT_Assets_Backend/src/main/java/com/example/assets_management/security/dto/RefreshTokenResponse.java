@@ -1,0 +1,1 @@
+package com.example.assets_management.security.dto; import java.util.UUID; import java.util.List; public record RefreshTokenResponse(String tokenType,String accessToken,long expiresIn,UUID userId,String email,String role,List<String> permissions,String refreshToken) {}

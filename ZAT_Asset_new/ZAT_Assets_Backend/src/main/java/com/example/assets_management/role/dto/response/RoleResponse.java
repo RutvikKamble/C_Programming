@@ -1,0 +1,1 @@
+package com.example.assets_management.role.dto.response; import com.example.assets_management.role.enums.*; import java.time.LocalDateTime; import java.util.UUID; public record RoleResponse(UUID id,UUID companyId,String name,String code,String description,RoleType type,RoleStatus status,boolean systemDefined,boolean active,LocalDateTime createdAt,LocalDateTime updatedAt) {}

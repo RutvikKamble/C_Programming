@@ -1,0 +1,47 @@
+package com.example.assets_management.asset_history.enums;
+
+/**
+ * Standard business events recorded in the append-only asset lifecycle trail.
+ * Legacy action strings may still be read from existing data.
+ */
+public enum AssetHistoryEventType {
+    ASSET_CREATED,
+    ASSET_UPDATED,
+    ASSET_DELETED,
+    PURCHASE_CREATED,
+    PURCHASE_COMPLETED,
+    ALLOCATED,
+    DEALLOCATED,
+    RETURN_REQUESTED,
+    RETURN_VERIFIED,
+    RETURN_COMPLETED,
+    TRANSFERRED,
+    MAINTENANCE_CREATED,
+    MAINTENANCE_STARTED,
+    MAINTENANCE_STATUS_CHANGED,
+    MAINTENANCE_COMPLETED,
+    PM_MAINTENANCE_GENERATED,
+    PM_COMPLETED,
+    WARRANTY_CREATED,
+    WARRANTY_UPDATED,
+    WARRANTY_DELETED,
+    WARRANTY_EXPIRED,
+    AMC_CREATED,
+    AMC_UPDATED,
+    AMC_DELETED,
+    DEPRECIATION_POSTED,
+    AUDIT_STARTED,
+    AUDIT_VERIFIED,
+    AUDIT_MISSING,
+    AUDIT_DAMAGED,
+    AUDIT_DISCREPANCY,
+    AUDIT_COMPLETED,
+    DISPOSAL_REQUESTED,
+    DISPOSAL_APPROVED,
+    DISPOSED,
+    SOFTWARE_ALLOCATED,
+    SOFTWARE_DEALLOCATED,
+    VEHICLE_SERVICE,
+    VEHICLE_FUEL,
+    STATUS_CHANGED
+}

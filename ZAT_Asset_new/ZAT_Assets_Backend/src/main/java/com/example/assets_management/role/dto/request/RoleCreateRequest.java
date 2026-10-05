@@ -1,0 +1,1 @@
+package com.example.assets_management.role.dto.request; import jakarta.validation.constraints.*; public record RoleCreateRequest(@NotBlank @Size(max=100) String name,@NotBlank @Size(max=80) String code,@Size(max=500) String description){ public RoleCreateRequest(String name,String description){this(name,name,description);} }

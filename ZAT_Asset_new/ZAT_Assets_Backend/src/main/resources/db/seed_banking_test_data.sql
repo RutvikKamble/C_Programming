@@ -1,0 +1,5 @@
+-- Banking seed template. Replace UUID placeholders with IDs from your local Company/Employee/Vendor data.
+-- Account numbers below are examples only and pass the 9-18 digit validation.
+-- INSERT INTO bank_accounts (...)
+-- VALUES ('<uuid>', '<company_uuid>', '123456789012', 'Main Current Account', 'CURRENT', 'COMPANY', NULL, NULL,
+--         'HDFC Bank', 'Pune Main Branch', 'HDFC0000001', 'INR', 500000.00, 500000.00, 'ACTIVE', TRUE, NULL, 'INTERNAL', CURRENT_DATE, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

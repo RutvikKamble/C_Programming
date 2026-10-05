@@ -1,0 +1,1 @@
+package com.example.assets_management.role_permission.dto.request; import jakarta.validation.constraints.NotNull; import java.util.*; public record RolePermissionReplaceRequest(@NotNull List<UUID> permissionIds) {}

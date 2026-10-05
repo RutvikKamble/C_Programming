@@ -1,0 +1,41 @@
+package com.example.assets_management.asset_software.dto.response;
+
+import com.example.assets_management.asset_software.enums.SoftwareLicenseStatus;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+public record SoftwareLicenseResponse(
+        UUID id,
+        UUID assetId,
+        String assetCode,
+        String assetName,
+        UUID companyId,
+        String companyName,
+        String name,
+        String publisher,
+        String manufacturer,
+        String licenseCategory,
+        UUID supplierId,
+        String supplierName,
+        String licenseKeyMasked,
+        Integer seatCount,
+        Integer seatsUsed,
+        Integer seatsAvailable,
+        LocalDate expiryDate,
+        LocalDate purchaseDate,
+        BigDecimal purchaseCost,
+        BigDecimal renewalCost,
+        String orderNumber,
+        String purchaseOrder,
+        String licenseContactName,
+        String licenseContactEmail,
+        String notes,
+        Boolean reassignable,
+        Boolean maintained,
+        LocalDate terminationDate,
+        SoftwareLicenseStatus status,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
+) {}

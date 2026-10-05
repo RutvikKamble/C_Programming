@@ -1,0 +1,1 @@
+package com.example.assets_management.security.rbac.dto; import com.example.assets_management.security.rbac.entity.OverrideEffect; import jakarta.validation.constraints.*; public record UserPermissionOverrideRequest(@NotNull OverrideEffect effect,@NotBlank @Size(max=1000) String reason) {}

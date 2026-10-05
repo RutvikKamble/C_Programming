@@ -1,0 +1,1 @@
+package com.example.assets_management.audit_run.repository; import com.example.assets_management.audit_run.entity.AuditRun; import org.springframework.data.jpa.repository.JpaRepository; public interface AuditRunRepository extends JpaRepository<AuditRun,Long>{}

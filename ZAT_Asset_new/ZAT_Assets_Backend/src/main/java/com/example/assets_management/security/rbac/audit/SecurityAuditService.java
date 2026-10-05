@@ -1,0 +1,1 @@
+package com.example.assets_management.security.rbac.audit; import java.util.UUID; public interface SecurityAuditService { void record(UUID companyId,UUID actor,UUID target,UUID role,UUID permission,SecurityAuditEventType type,String oldValue,String newValue); }

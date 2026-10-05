@@ -1,0 +1,7 @@
+package com.example.assets_management.security.controller;
+import com.example.assets_management.security.auth.*; import com.example.assets_management.security.dto.*; import com.example.assets_management.security.service.*; import jakarta.validation.Valid; import lombok.RequiredArgsConstructor; import org.springframework.http.*; import org.springframework.security.core.userdetails.UserDetails; import org.springframework.web.bind.annotation.*; import java.util.*;
+@RestController @RequestMapping("/api/auth") @RequiredArgsConstructor public class RefreshTokenController {
+ private final RefreshTokenService service; private final JwtService jwt;
+ @PostMapping("/refresh") public ResponseEntity<RefreshTokenResponse> refresh(@Valid @RequestBody RefreshTokenRequest req){RefreshTokenService.RefreshTokenRotation rotation=service.rotate(req.refreshToken()); RefreshToken t=rotation.token(); UserDetails d=service.details(t.getUser()); CustomUserDetails c=(CustomUserDetails)d; List<String> p=d.getAuthorities().stream().map(a->a.getAuthority()).filter(x->!x.startsWith("ROLE_")).toList(); return ResponseEntity.ok(new RefreshTokenResponse("Bearer",jwt.generateToken(d),jwt.getExpirationMs(),c.getUserId(),c.getUsername(),c.getRoleName(),p,rotation.rawToken()));}
+ @PostMapping("/logout") public ResponseEntity<Void> logout(@Valid @RequestBody RefreshTokenRequest req){service.revoke(req.refreshToken());return ResponseEntity.noContent().build();}
+}
